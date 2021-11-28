@@ -1,0 +1,28 @@
+#include<stdio.h>
+typedef struct
+{
+ char *name;
+ int age;
+ float phonenum;
+ int salary;
+ }details;
+ main()
+ {
+  void adjust(details *pt);
+  static details employee={"Chirag",24,123456788,20000};
+  printf("%s %d %f %d",employee.name,employee.age,employee.phonenum,employee.salary);
+  adjust(&employee);
+  printf("\n %s %d %f %d",employee.name,employee.age,employee.phonenum,employee.salary);
+ }
+ void adjust(details *pt)
+ {
+  pt->name="Arnav";
+  pt->age=32;
+  pt->phonenum=1234567891;
+  pt->salary=56000;
+  pt->name="Shivam";
+  pt->age=45;
+  pt->phonenum=888110111;
+  pt->salary=30500;
+  return;
+ }
